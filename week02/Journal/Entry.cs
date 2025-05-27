@@ -6,6 +6,6 @@ public class Entry
 
     public void Display()
     {
-
+        Console.WriteLine($"Date: {_date} - Promt: {_promtText}\n{_entryText}");
     }
 }
