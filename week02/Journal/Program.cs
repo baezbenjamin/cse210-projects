@@ -28,6 +28,7 @@ class Program
 
                 entry._promtText = newPromt.GetRandomPrompt();
                 Console.WriteLine(entry._promtText);
+                Console.Write("> ");
                 entry._entryText = Console.ReadLine();
                 entry._date = theCurrentTime.ToShortDateString();
 
@@ -39,11 +40,15 @@ class Program
             }
             else if (option == 3)
             {
-                Console.WriteLine("OK 3");
+                Console.WriteLine("What is the filename?");
+                string filename = Console.ReadLine();
+                journal.LoadFromFile(filename);
             }
             else if (option == 4)
             {
-                Console.WriteLine("OK 4");
+                Console.WriteLine("What is the filename?");
+                string filename = Console.ReadLine();
+                journal.SaveToFile(filename);
             }
             else if (option == 5)
             {
