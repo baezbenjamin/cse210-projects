@@ -10,7 +10,7 @@ public class Customer
         _address = address;
     }
 
-    public void LivesInUsa()
+    public bool LivesInUsa()
     {
         if (_address.AddressInUsa() == false)
         {
@@ -20,10 +20,11 @@ public class Customer
         {
             _livesInUsa = true;
         }
+        return _livesInUsa;
     }
 
     public string DisplayCustomer()
     {
-        return $"Customer Name: {_customerName}\nAddress: {_address.DisplayAddress}";
+        return $"Customer Name: {_customerName}\nAddress: {_address.DisplayAddress()}";
     }
 }
